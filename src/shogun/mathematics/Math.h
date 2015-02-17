@@ -511,6 +511,21 @@ class CMath : public CSGObject
 			x = x*(1.5f - xhalf*x*x); // One round of Newton's method
 			return x;
 		}
+		
+		/** Range fill a vector with start...start+len-1
+		 *
+		 * @param v the vector to be filled
+		 * @param len length of the vector v
+		 * @param start - value to be assigned to first element of vector
+		 */
+		template <class T>
+			static void range_fill(SGVector<T> v, int32_t len, T start=0)
+			{
+				REQUIRE(len>0 && len<=v.size(),"Vector length is out of bounds.\n");
+
+				for(index_t i=0; i<len; ++i)
+					v[i]=i+start;
+			}
 
 		/**
 		 * @name Exponential methods (x^n)
