@@ -537,3 +537,4 @@ TEST(CMath, range_fill2)
 	EXPECT_NEAR(v[2], 2.0, 1e-9);
 	EXPECT_NEAR(v[3], 3.0, 1e-9);
 }
+
