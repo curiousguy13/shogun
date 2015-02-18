@@ -525,14 +525,11 @@ TEST(CMath, range_fill)
 }
 TEST(CMath, range_fill2)
 {
-	int32_t d=4;	
-	SGVector<float64_t> v(d);
-	
-	//float64_t* v= SG_MALLOC(float64_t, d);
+	int32_t size=4;
+	float64_t* v= SG_MALLOC(float64_t, size);
 
-	CMath::range_fill(v,d,0.0);
+	CMath::range_fill(v,size,0.0);
 
-	EXPECT_EQ(v.vlen, 4);
 	EXPECT_NEAR(v[0], 0.0, 1e-9);
 	EXPECT_NEAR(v[1], 1.0, 1e-9);
 	EXPECT_NEAR(v[2], 2.0, 1e-9);
