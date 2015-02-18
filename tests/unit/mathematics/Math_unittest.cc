@@ -511,6 +511,7 @@ TEST(CMath, dot)
 	float64_t sgdot_val = CMath::dot(a.vector,a.vector, a.vlen);
 	EXPECT_NEAR(dot_val, sgdot_val, 1e-9);
 }
+
 TEST(CMath, range_fill)
 {
 	SGVector<index_t> v(4);
@@ -523,6 +524,7 @@ TEST(CMath, range_fill)
 	EXPECT_EQ(v[2], 2);
 	EXPECT_EQ(v[3], 3);
 }
+
 TEST(CMath, range_fill2)
 {
 	int32_t size=4;
